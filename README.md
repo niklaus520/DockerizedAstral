@@ -1,6 +1,6 @@
-# Dockerlized Astral
+# Dockerized Astral
 
-[**Astral**](https://github.com/astralapp/astral), an open source application that allows you to organize your GitHub Stars with ease. Astral can be used with free hosted version or self hosted instance. However, a dockerlized Astral is not provided so I create this project to share my Astral dockerfile. 
+[**Astral**](https://github.com/astralapp/astral), an open source application that allows you to organize your GitHub Stars with ease. Astral can be used with free hosted version or self hosted instance. However, a dockerized Astral is not provided so I create this project to share my Astral dockerfile. 
 
 ---
 

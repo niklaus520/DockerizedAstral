@@ -10,8 +10,9 @@
 - [Create a new GitHub OAuth App](https://docs.github.com/en/developers/apps/creating-an-oauth-app/) so you can plug in your API keys.
 
 ### Modification
-- Modify `.env` file with your Github App ID/Secret/Callback URI.
+- Modify `.env.sample` file into `.env` with your Github App ID/Secret/Callback URI.
 - Modify `docker-compose.yml` with your mysql data path.
+- Keep in mind you need to save a copy of `/var/www/html/.env` file after you successfully run the astral application as it contains the APP_KEY. This key is needed to upgrade your container. Losing it may result rebuilding your mysql database. 
 
 ### Run
 - Run `docker-compose build` to build your Astral image.

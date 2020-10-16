@@ -2,5 +2,6 @@
 set -e
 
 php artisan migrate
+php-fpm --daemonize
 
-/usr/bin/caddy --conf /etc/Caddyfile --log stdout
+/usr/bin/caddy run -config /etc/Caddyfile

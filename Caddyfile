@@ -1,13 +1,13 @@
-0.0.0.0
-root /var/www/html/public/
-gzip
-fastcgi / 127.0.0.1:9000 php
-rewrite {
-    regexp .*
-    ext /
-    to /index.php?{query}
-}
+:2015 {
+    encode gzip
+    root * /var/www/html/public
+    file_server
+    php_fastcgi 127.0.0.1:9000
+    #rewrite * /index.php?{query}
+    try_files {path} /index.php?{query}
 
-log stdout
-errors stdout
-on startup php-fpm --nodaemonize
+    log {
+        output stdout
+        level INFO
+    }
+}

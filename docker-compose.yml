@@ -8,7 +8,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: astral:version1
+    image: astral:latest
     container_name: astral
     ports:
       - 8180:2015
@@ -25,7 +25,7 @@ services:
         - MYSQL_USER=astral
         - MYSQL_PASSWORD=astral
     volumes:
-        - /home/vps/docker_data/astral/mysql:/var/lib/mysql
+        - /home/zero/docker_data/astral/mysql:/var/lib/mysql
     healthcheck:
         test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
         timeout: 45s
